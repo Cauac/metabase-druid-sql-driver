@@ -1,0 +1,20 @@
+info:
+  name: Metabase Druid SQL Driver
+  version: 1.0.0
+  description: Allows Metabase to connect to Apache Druid using the Avatica JDBC driver.
+driver:
+  name: druid-sql
+  display-name: DruidSQL
+  lazy-load: true
+  parent: sql-jdbc
+  connection-properties:
+    - host
+    - merge:
+        - port
+        - display-name: Broker port
+        - default: 8082
+init:
+  - step: load-namespace
+    namespace: metabase.driver.druid-sql
+  - step: register-jdbc-driver
+    class: org.apache.calcite.avatica.remote.Driver

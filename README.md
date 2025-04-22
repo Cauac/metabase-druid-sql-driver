@@ -1,3 +1,6 @@
+
+**NOTE:** This driver implementation is no longer relevant. Starting from [Metabase v50](https://www.metabase.com/releases/metabase-50#smaller-but-still-cool-stuff) Druid JDBC driver is included as a built-in driver.
+ 
 # Metabase Druid Driver (SQL version)
 
 The driver allows Metabase to query Apache Druid database using [Druid SQL](https://druid.apache.org/docs/latest/querying/sql-jdbc.html) language.
